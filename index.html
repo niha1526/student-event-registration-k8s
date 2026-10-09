@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Event Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #174a7e;
+        }
+
+        .event-info {
+            background: #eaf4ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #174a7e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #10365c;
+        }
+
+        #message {
+            margin-top: 18px;
+            text-align: center;
+            font-weight: bold;
+            color: #167342;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: #d1fae5; color: #065f46; padding: 15px; margin: 15px 0; border-radius: 8px; text-align: center;">
+        <h2>UPDATED VERSION 2</h2>
+        <p>Student Event Registration — Updated Deployment Successful!</p>
+    </div>
+    <div class="container">
+        <h1>Student Event Registration</h1>
+
+        <div class="event-info">
+            <h2>TechFest 2026</h2>
+            <p>Join us for a student technology event featuring
+               innovation, coding and exciting technical activities.</p>
+            <p><strong>Event Date:</strong> 20 November 2026</p>
+        </div>
+
+        <form id="registrationForm">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName"
+                   placeholder="Enter your full name" required>
+
+            <label for="registerNumber">Register Number</label>
+            <input type="text" id="registerNumber" name="registerNumber"
+                   placeholder="Enter your register number" required>
+
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="">Select department</option>
+                <option>Software Engineering</option>
+                <option>Computer Science and Engineering</option>
+                <option>Information Technology</option>
+                <option>Electronics and Communication Engineering</option>
+                <option>Other</option>
+            </select>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="student@example.com" required>
+
+            <label for="eventDate">Event Date</label>
+            <input type="date" id="eventDate" name="eventDate"
+                   value="2026-11-20" required>
+
+            <button type="submit">Register for Event</button>
+        </form>
+
+        <p id="message" role="status"></p>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                document.getElementById("message").textContent =
+                    "Registration submitted successfully!";
+            });
+    </script>
+</body>
+</html>
